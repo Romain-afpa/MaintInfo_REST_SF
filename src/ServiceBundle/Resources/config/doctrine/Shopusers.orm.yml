@@ -1,0 +1,43 @@
+ServiceBundle\Entity\Shopusers:
+    type: entity
+    table: shopusers
+    id:
+        idShopuser:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ID_SHOPUSER
+            generator:
+                strategy: IDENTITY
+    fields:
+        identifiant:
+            type: string
+            nullable: false
+            length: 60
+            options:
+                fixed: false
+            column: IDENTIFIANT
+        motdepasse:
+            type: string
+            nullable: false
+            length: 60
+            options:
+                fixed: false
+            column: MOTDEPASSE
+        nom:
+            type: string
+            nullable: true
+            length: 60
+            options:
+                fixed: false
+            column: NOM
+        email:
+            type: string
+            nullable: true
+            length: 60
+            options:
+                fixed: false
+            column: EMAIL
+    lifecycleCallbacks: {  }

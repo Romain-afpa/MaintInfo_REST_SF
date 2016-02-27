@@ -1,0 +1,71 @@
+ServiceBundle\Entity\Articles:
+    type: entity
+    table: articles
+    id:
+        idArticle:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ID_ARTICLE
+            generator:
+                strategy: IDENTITY
+    fields:
+        desart:
+            type: string
+            nullable: true
+            length: 60
+            options:
+                fixed: false
+            column: DESART
+        stockart:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: STOCKART
+        seuilmin:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: SEUILMIN
+        encommande:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: ENCOMMANDE
+        enrepa:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: ENREPA
+        prixart:
+            type: float
+            nullable: true
+            precision: 13
+            scale: 2
+            column: PRIXART
+        delaireappro:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: DELAIREAPPRO
+        consomoy:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: CONSOMOY
+        fabriquant:
+            type: string
+            nullable: true
+            length: 60
+            options:
+                fixed: false
+            column: FABRIQUANT
+    lifecycleCallbacks: {  }

@@ -1,0 +1,49 @@
+ServiceBundle\Entity\Lignes:
+    type: entity
+    table: lignes
+    indexes:
+        I_FK_LIGNES_PANIERS:
+            columns:
+                - ID_PANIER
+        I_FK_LIGNES_ARTICLES:
+            columns:
+                - ID_ARTICLE
+    id:
+        idLigne:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ID_LIGNE
+            generator:
+                strategy: IDENTITY
+    fields:
+        quantite:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: QUANTITE
+    manyToOne:
+        idArticle:
+            targetEntity: Articles
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ID_ARTICLE:
+                    referencedColumnName: ID_ARTICLE
+            orphanRemoval: false
+        idPanier:
+            targetEntity: Paniers
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ID_PANIER:
+                    referencedColumnName: ID_PANIER
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

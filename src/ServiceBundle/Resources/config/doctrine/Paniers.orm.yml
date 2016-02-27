@@ -1,0 +1,44 @@
+ServiceBundle\Entity\Paniers:
+    type: entity
+    table: paniers
+    indexes:
+        I_FK_PANIERS_SHOPUSERS:
+            columns:
+                - ID_SHOPUSER
+    id:
+        idPanier:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ID_PANIER
+            generator:
+                strategy: IDENTITY
+    fields:
+        datepanier:
+            type: string
+            nullable: false
+            length: 16
+            options:
+                fixed: false
+            column: DATEPANIER
+        sessionid:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: SESSIONID
+    manyToOne:
+        idShopuser:
+            targetEntity: Shopusers
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ID_SHOPUSER:
+                    referencedColumnName: ID_SHOPUSER
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

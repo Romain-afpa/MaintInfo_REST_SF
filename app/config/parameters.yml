@@ -1,0 +1,9 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_host: '127.0.0.1'
+    database_port: ~
+    database_name: 'maintinfo_shop'
+    database_user: 'root'
+    database_password: ~
+    secret: df564gfh65ds4fh
