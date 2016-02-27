@@ -1,0 +1,4 @@
+service:
+    type:     rest
+    prefix:   /api
+    resource: "@ServiceBundle/Resources/config/api-routing.yml"

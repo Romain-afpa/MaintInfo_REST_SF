@@ -1,0 +1,3 @@
+articles_resource:
+    type: rest
+    resource: "@ServiceBundle/Controller/ArticlesController.php"
